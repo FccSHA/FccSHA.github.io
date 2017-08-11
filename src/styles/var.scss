@@ -1,0 +1,32 @@
+// constant
+
+$per100: 100%;
+
+
+// paddings
+
+$pad10: 10px;
+$pad15: 15px;
+$pad20: 20px;
+
+$font14: 14px;
+$font16: 16px;
+$font18: 18px;
+$font20: 20px;
+$font24: 24px;
+// colors
+
+$darkerGray: #6d6d6d;
+$lighterGray: #d8d8d8;
+$white: #fff;
+$dark: #000;
+$fccGreen: #1b5c46;
+
+@mixin textCenter() {
+  text-align: center;
+}
+
+@mixin imgSize($size) {
+  width: $size;
+  height: $size;
+}

@@ -1,3 +1,1 @@
-## FCC SHA main page 
-
-### This is FCC Shanghai community 
+## welcome to shanghai(FCC)!

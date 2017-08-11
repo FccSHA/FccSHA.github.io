@@ -3,7 +3,8 @@ import React from 'react';
 import {
   HashRouter as Router,
   Route,
-  Link
+  Link,
+  Redirect
 } from 'react-router-dom';
 
 // components
@@ -16,11 +17,12 @@ import SideBar from './pages/sideBar';
 export const FccSha = () => (
   <Router>
     <div className="sha-main">
-      <div className="sha-side-bar">
+      <div className="sha-side-main">
         <SideBar />
       </div>
       <div className="sha-router-main">
-        <Route exact path="/" component={AboutUs} />
+        <Redirect from="/" to="about-us" />
+        <Route exact path="/about-us" component={AboutUs} />
         <Route path="/contributors" component={Contributors} />
         <Route path="/achievements" component={Achievements} />
       </div>

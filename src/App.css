@@ -31,6 +31,20 @@ html, body {
 
 .sha-router-main {
   height: 100%;
-
   margin-left: 200px;
+}
+
+.sha-side-bar {
+  list-style: none;
+}
+
+.sha-side-bar .sha-side-item {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 10px;
+}
+
+.sha-side-bar .sha-side-item span {
+
 }

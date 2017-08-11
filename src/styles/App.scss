@@ -1,0 +1,92 @@
+@import './var.scss';
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: $font14;
+}
+
+html,
+body {
+  height: 100vh;
+  width: $per100;
+}
+
+#root {
+  height: $per100;
+  .sha-main {
+    height: $per100;
+    width: 1280px;
+    margin: 0 auto;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
+    .sha-side-main {
+      position: relative;
+      height: $per100;
+      background-color: $lighterGray;
+      width: 200px;
+      float: left;
+      .sha-img-legend {
+        @include textCenter();
+        color: $darkerGray;
+        font-size: $font24;
+      }
+
+      .sha-social {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        .sha-social-legend {
+          @include textCenter()
+        }
+        .sha-social-icons {
+          @include textCenter();
+          .sha-social-icon {
+            margin: 0 $font14;
+            @include imgSize(30px);
+          }
+        }
+      }
+
+      .sha-side-bar {
+        display: inline-block;
+        margin: 50px 0 0 0;
+        list-style: none;
+        padding-left: $pad15;
+        text-align: left;
+        .sha-side-item {
+          display: table;
+          font-size: $font18;
+          line-height: $font24;
+          margin: $pad20 0;
+          .sha-nav-link {
+            &,
+            &:active,
+            &:focus {
+              text-decoration: none;
+              color: $darkerGray;
+            }
+          }
+          img {
+            height: $font24;
+            width: $font24;
+          }
+          span {
+            text-align: center;
+            display: table-cell;
+            padding: 0 $pad10;
+            line-height: $font24;
+            &.sha-side-title {
+              font-size: $font18;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+    .sha-router-main {
+      height: $per100;
+      margin-left: 200px;
+    }
+  }
+}
