@@ -7,6 +7,10 @@
   font-size: $font14;
 }
 
+*::-webkit-scrollbar{
+  display: none;
+}
+
 html,
 body {
   height: 100vh;

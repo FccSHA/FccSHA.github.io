@@ -1,0 +1,62 @@
+@import './var.scss';
+.contributors{
+  padding: $pad20 $pad40;
+  height: $per100;
+  overflow-y: scroll;
+  color: #293a46;
+  font-weight: 200;
+  .title{
+    font-size: $font48;
+    margin-bottom: $mar20;
+  }
+  .contributors-wall{
+    .contributor{
+      &:hover{
+        cursor: pointer;
+        border-color: rgba(0,0,0,0.1);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 15px rgba(0,0,0,0.1);
+        transition: box-shadow ease-in-out 0.1s;
+      }
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      width: 290px;
+      height: 310px;
+      margin: 0 $mar20 $mar20 0;
+      background-color: $white;
+      border-radius: 3px;
+      border: 1px solid rgba(0,0,0,0.075);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 5px 10px rgba(0,0,0,0.05);
+      transition: box-shadow ease-in-out 0.15s;
+      .bg{
+        display: inline-block;
+        width: $per100;
+        height: 100px;
+        background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+        background-color: cadetblue;
+        margin-bottom: $mar20;
+      }
+      .logo{
+        @include imgSize(90px);
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        border: 3px solid $white;
+        background-color: $white;
+        left: 99px;
+        top: 55px;
+      }
+      .info{
+        line-height: 26px;
+        padding: 30px;
+        @include textCenter();
+        .nickname{
+          font-size: $font20;
+          word-spacing: 2px;
+          letter-spacing: 2px;
+          margin-bottom: $mar30;
+        }
+      }
+    }
+  }
+}
