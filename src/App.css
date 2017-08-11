@@ -1,24 +1,36 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 14px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+html, body {
+  height: 100vh;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#root {
+  height: 100%;
 }
 
-.App-intro {
-  font-size: large;
+.sha-main {
+  height: 100%;
+  width: 1280px;
+  margin: 0 auto;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.sha-side-bar {
+  height: 100%;
+  background-color: #d8d8d8;
+  width: 200px;
+  float: left;
+}
+
+.sha-router-main {
+  height: 100%;
+
+  margin-left: 200px;
 }
