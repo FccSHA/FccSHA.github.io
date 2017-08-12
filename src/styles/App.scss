@@ -1,4 +1,6 @@
 @import './var.scss';
+@import './about-us.scss';
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -16,6 +18,12 @@ body {
   height: 100vh;
   width: $per100;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  min-height: 600px;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
 }
 
 #root {
@@ -51,10 +59,21 @@ body {
           @include textCenter()
         }
         .sha-social-icons {
+          position: relative;
           @include textCenter();
-          .sha-social-icon {
-            margin: 0 $font14;
+          a {
             @include imgSize(30px);
+            margin: 0 $font14;
+          }
+          .sha-social-icon {
+            @include imgSize(30px);
+          }
+          .sha-popover {
+            height: 260px;
+            width: 200px;
+            position: absolute;
+            top: -260px;
+            left: 0;
           }
         }
       }
@@ -97,6 +116,12 @@ body {
     .sha-router-main {
       height: $per100;
       margin-left: 200px;
+      padding-top: 20px;
+      overflow: scroll;
+      > div {
+        width: 95%;
+        margin: 0 auto;
+      }
     }
   }
 }
