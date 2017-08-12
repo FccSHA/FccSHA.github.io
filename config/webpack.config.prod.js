@@ -143,6 +143,7 @@ module.exports = {
           /\.gif$/,
           /\.jpe?g$/,
           /\.png$/,
+          /\.scss$/,
         ],
         loader: require.resolve('file-loader'),
         options: {
@@ -224,6 +225,11 @@ module.exports = {
         // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
       },
       // ** STOP ** Are you adding a new loader?
+      {
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+        exclude: ['node_modules/']
+      }
       // Remember to add the new extension(s) to the "file" loader exclusion list.
     ],
   },

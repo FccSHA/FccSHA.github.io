@@ -49,7 +49,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.js && sh cpfile.sh",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
@@ -97,5 +97,6 @@
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "scss-loader": "0.0.1"
-  }
+  },
+  "homepage": "https://fccsha.github.io"
 }

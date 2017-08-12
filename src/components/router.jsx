@@ -8,10 +8,10 @@ import {
 
 // components
 
-import AboutUs from './pages/aboutUs';
-import Contributors from './pages/contributors';
-import Achievements from './pages/achievements';
-import SideBar from './pages/sideBar';
+import AboutUs from '../pages/aboutUs';
+import Contributors from '../pages/contributors';
+import Achievements from '../pages/achievements';
+import SideBar from '../pages/sideBar';
 
 export const FccSha = () => (
   <Router>
@@ -20,7 +20,7 @@ export const FccSha = () => (
         <SideBar />
       </div>
       <div className="sha-router-main">
-        {/*<Redirect from="/" to="about-us" />*/}
+        <Redirect from="/" to="about-us" />
         <Route path="/about-us" component={AboutUs} />
         <Route path="/contributors" component={Contributors} />
         <Route path="/achievements" component={Achievements} />

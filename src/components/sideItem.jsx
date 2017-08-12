@@ -9,4 +9,4 @@ export const SideItem = (props) => (
       {props.title}
     </Link>
   </Menu.Item>
-)
+);
