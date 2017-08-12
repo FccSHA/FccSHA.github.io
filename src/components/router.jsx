@@ -28,4 +28,4 @@ export const FccSha = () => (
       </div>
     </div>
   </Router>
-)
+);

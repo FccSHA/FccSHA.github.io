@@ -27,6 +27,13 @@ $fccGreen: #1b5c46;
 }
 
 @mixin imgSize($size) {
+  display: inline-block;
   width: $size;
   height: $size;
+}
+
+@mixin legendTitle() {
+  font-size: $font24;
+  margin: $font20 0;
+  color: $darkerGray;
 }
