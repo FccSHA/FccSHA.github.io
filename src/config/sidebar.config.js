@@ -1,16 +1,16 @@
 export default [{
     title: 'About Us',
-    icon: 'position.svg',
+    icon: 'coffee',
     to: 'about-us'
   },
   {
     title: 'Contributors',
-    icon: 'group.svg',
+    icon: 'team',
     to: 'contributors'
   },
   {
     title: 'Achievements',
-    icon: 'link.svg',
+    icon: 'share-alt',
     to: 'achievements'
   }
 ];

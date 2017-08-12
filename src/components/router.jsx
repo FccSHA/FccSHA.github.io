@@ -3,7 +3,6 @@ import React from 'react';
 import {
   HashRouter as Router,
   Route,
-  Link,
   Redirect
 } from 'react-router-dom';
 
