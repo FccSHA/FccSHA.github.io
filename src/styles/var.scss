@@ -1,5 +1,5 @@
+@import "~antd/dist/antd.min.css";
 // constant
-
 $per100: 100%;
 
 
@@ -44,4 +44,5 @@ $fccGreen: #1b5c46;
   font-size: $font24;
   margin: $font20 0;
   color: $darkerGray;
+  font-weight: normal;
 }

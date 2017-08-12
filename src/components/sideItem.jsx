@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {Menu, Icon} from 'antd';
 
 export const SideItem = (props) => (
-  <li className="sha-side-item">
-    <Link to={props.to} className="sha-nav-link" >
-      <img className="sha-side-img"src={`/static/${props.icon}`} alt={props.title} />
+  <Menu.Item {...props}>
+    <Link to={props.to}>
+      <Icon type={props.icon} style={{ fontSize: 16 }} />
       {props.title}
     </Link>
-  </li>
+  </Menu.Item>
 )

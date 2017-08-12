@@ -34,6 +34,8 @@ h1, h2, h3, h4, h5 {
     margin: 0 auto;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 15px rgba(0,0,0,0.1);
     .sha-side-main {
+      user-select: none;
+      cursor: default;
       position: relative;
       height: $per100;
       background-color: #fbf4f4;
@@ -49,8 +51,11 @@ h1, h2, h3, h4, h5 {
         color: $darkerGray;
         font-size: $font24;
         font-weight: normal;
+        margin: 20px 0;
       }
-
+      .ant-menu-inline{
+        border-right: none;
+      }
       .sha-social {
         position: absolute;
         bottom: 0;
@@ -67,48 +72,6 @@ h1, h2, h3, h4, h5 {
           }
           .sha-social-icon {
             @include imgSize(30px);
-          }
-          .sha-popover {
-            height: 260px;
-            width: 200px;
-            position: absolute;
-            top: -260px;
-            left: 0;
-          }
-        }
-      }
-
-      .sha-side-bar {
-        display: inline-block;
-        width: $per100;
-        margin: 0;
-        list-style: none;
-        border-top: 1px solid rgba(0,0,0,0.05);
-        padding: 0;
-        text-align: left;
-        .sha-side-item {
-          font-size: $font18;
-          line-height: $font18;
-          .sha-nav-link.active{
-            background: $darkerGray;
-            color: #fbf4f4;
-          }
-          .sha-nav-link {
-            &:hover {
-              background: $darkerGray;
-              color: #fbf4f4;
-              transition: all 0.25s ease;
-            }
-            display: block;
-            padding: 14px 0 14px $font18;
-            color: $darkerGray;
-            text-decoration: none;
-            .sha-side-img {
-              height: $font16;
-              width: $font16;
-              margin-right: $font18;
-              vertical-align: bottom;
-            }
           }
         }
       }

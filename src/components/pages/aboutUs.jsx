@@ -2,11 +2,6 @@ import React from 'react';
 import {Carousel} from 'antd';
 
 export default class AboutUs extends React.Component {
-
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <div className="sha-about-us">
@@ -44,9 +39,5 @@ export default class AboutUs extends React.Component {
         </div>
       </div>
     )
-  }
-
-  onChange() {
-
   }
 };

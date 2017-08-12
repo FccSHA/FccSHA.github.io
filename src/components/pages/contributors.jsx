@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Contributor from '../contributor';
 import userNameList from '../../config/contributors.config'
+import {Col, Row} from 'antd';
 
 export default class Contributors extends React.Component {
   constructor() {
@@ -21,32 +22,36 @@ export default class Contributors extends React.Component {
   }
 
   componentDidMount(){
-    // this.getContributors().then((res)=>{
-    //   if(!res || !res.length){
-    //     return ;
-    //   }
-    //   this.setState({
-    //     users: res.map((user, index)=>{
-    //       if(user && user.data){
-    //         return Object.assign({}, user.data, userNameList[index]);
-    //       }else{
-    //         return userNameList[index]
-    //       }
-    //     })
-    //   })
-    // })
+    this.getContributors().then((res)=>{
+      if(!res || !res.length){
+        return ;
+      }
+      this.setState({
+        users: res.map((user, index)=>{
+          if(user && user.data){
+            return Object.assign({}, user.data, userNameList[index]);
+          }else{
+            return userNameList[index]
+          }
+        })
+      })
+    })
   }
 
   render() {
     const users = this.state.users.map((user, index)=>{
-      return <Contributor key={index} user={user} />
+      return (
+        <Col span={8} key={index}>
+          <Contributor user={user}/>
+        </Col>
+      );
     })
     return (
       <div className="sha-contributors">
         <div className="sha-title">Contributors</div>
-        <div className="sha-contributors-wall">
+        <Row gutter={16} className="sha-contributors-wall">
           {users}
-        </div>
+        </Row>
       </div>
     )
   }
