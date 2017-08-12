@@ -21,8 +21,8 @@ export const FccSha = () => (
         <SideBar />
       </div>
       <div className="sha-router-main">
-        <Redirect from="/" to="about-us" />
-        <Route exact path="/about-us" component={AboutUs} />
+        {/*<Redirect from="/" to="about-us" />*/}
+        <Route path="/about-us" component={AboutUs} />
         <Route path="/contributors" component={Contributors} />
         <Route path="/achievements" component={Achievements} />
       </div>

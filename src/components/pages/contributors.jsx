@@ -21,20 +21,20 @@ export default class Contributors extends React.Component {
   }
 
   componentDidMount(){
-    this.getContributors().then((res)=>{
-      if(!res || !res.length){
-        return ;
-      }
-      this.setState({
-        users: res.map((user, index)=>{
-          if(user && user.data){
-            return Object.assign({}, user.data, userNameList[index]);
-          }else{
-            return userNameList[index]
-          }
-        })
-      })
-    })
+    // this.getContributors().then((res)=>{
+    //   if(!res || !res.length){
+    //     return ;
+    //   }
+    //   this.setState({
+    //     users: res.map((user, index)=>{
+    //       if(user && user.data){
+    //         return Object.assign({}, user.data, userNameList[index]);
+    //       }else{
+    //         return userNameList[index]
+    //       }
+    //     })
+    //   })
+    // })
   }
 
   render() {
@@ -42,9 +42,9 @@ export default class Contributors extends React.Component {
       return <Contributor key={index} user={user} />
     })
     return (
-      <div className="contributors">
-        <div className="title">Contributors</div>
-        <div className="contributors-wall">
+      <div className="sha-contributors">
+        <div className="sha-title">Contributors</div>
+        <div className="sha-contributors-wall">
           {users}
         </div>
       </div>

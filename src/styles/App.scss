@@ -15,6 +15,7 @@ html,
 body {
   height: 100vh;
   width: $per100;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #root {
@@ -23,17 +24,23 @@ body {
     height: $per100;
     width: 1280px;
     margin: 0 auto;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 15px rgba(0,0,0,0.1);
     .sha-side-main {
       position: relative;
       height: $per100;
-      background-color: $lighterGray;
+      background-color: #fbf4f4;
+      border-right: 1px solid rgba(0,0,0,0.03);
       width: 200px;
       float: left;
+      .sha-main-logo {
+        padding: 6px;
+        width: $per100;
+      }
       .sha-img-legend {
         @include textCenter();
         color: $darkerGray;
         font-size: $font24;
+        font-weight: normal;
       }
 
       .sha-social {
@@ -54,35 +61,34 @@ body {
 
       .sha-side-bar {
         display: inline-block;
-        margin: 50px 0 0 0;
+        width: $per100;
+        margin: 0;
         list-style: none;
-        padding-left: $pad15;
+        border-top: 1px solid rgba(0,0,0,0.05);
+        padding: 0;
         text-align: left;
         .sha-side-item {
-          display: table;
           font-size: $font18;
-          line-height: $font24;
-          margin: $pad20 0;
+          line-height: $font18;
+          .sha-nav-link.active{
+            background: $darkerGray;
+            color: #fbf4f4;
+          }
           .sha-nav-link {
-            &,
-            &:active,
-            &:focus {
-              text-decoration: none;
-              color: $darkerGray;
+            &:hover {
+              background: $darkerGray;
+              color: #fbf4f4;
+              transition: all 0.25s ease;
             }
-          }
-          img {
-            height: $font24;
-            width: $font24;
-          }
-          span {
-            text-align: center;
-            display: table-cell;
-            padding: 0 $pad10;
-            line-height: $font24;
-            &.sha-side-title {
-              font-size: $font18;
-              vertical-align: middle;
+            display: block;
+            padding: 14px 0 14px $font18;
+            color: $darkerGray;
+            text-decoration: none;
+            .sha-side-img {
+              height: $font16;
+              width: $font16;
+              margin-right: $font18;
+              vertical-align: bottom;
             }
           }
         }

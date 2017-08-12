@@ -1,56 +1,81 @@
 @import './var.scss';
-.contributors{
+
+$blockRadius: 3px;
+$boxShadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 15px rgba(0,0,0,0.1);
+$color: #293a46;
+
+@keyframes sha-bg-stripes {
+  from{ 
+    background-position: 228px 0; 
+  }
+  to{ 
+    background-position: 0 0; 
+  }
+}
+
+.sha-contributors{
   padding: $pad20 $pad40;
   height: $per100;
   overflow-y: scroll;
-  color: #293a46;
   font-weight: 200;
-  .title{
+  color: $color;
+
+  .sha-title{
     font-size: $font48;
+    padding-bottom: 20px;
     margin-bottom: $mar20;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
   }
-  .contributors-wall{
-    .contributor{
+  .sha-contributors-wall{
+    .sha-contributor{
       &:hover{
         cursor: pointer;
         border-color: rgba(0,0,0,0.1);
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 15px rgba(0,0,0,0.1);
+        box-shadow: $boxShadow;
         transition: box-shadow ease-in-out 0.1s;
+        &:before{
+          animation: sha-bg-stripes 2s linear infinite;
+        }
       }
-      display: inline-block;
-      overflow: hidden;
-      position: relative;
-      width: 290px;
-      height: 310px;
-      margin: 0 $mar20 $mar20 0;
-      background-color: $white;
-      border-radius: 3px;
-      border: 1px solid rgba(0,0,0,0.075);
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 5px 10px rgba(0,0,0,0.05);
-      transition: box-shadow ease-in-out 0.15s;
-      .bg{
+      &:before{
         display: inline-block;
+        content: "";
         width: $per100;
         height: 100px;
-        background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+        background-image: linear-gradient(24deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
         background-color: cadetblue;
         margin-bottom: $mar20;
+        border-radius: $blockRadius $blockRadius 0 0;
       }
-      .logo{
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      width: 235px;
+      height: 310px;
+      margin: 10px 5px;
+      padding: 4px;
+      color: $color;
+      text-decoration: none;
+      background-color: $white;
+      border-radius: $blockRadius;
+      border: 1px solid rgba(0,0,0,0.075);
+      box-shadow: $boxShadow;
+      transition: box-shadow ease-in-out 0.15s;
+      .sha-logo{
         @include imgSize(90px);
         position: absolute;
         border-radius: 50%;
-        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        box-shadow: $boxShadow;
         border: 3px solid $white;
         background-color: $white;
-        left: 99px;
+        left: 74px;
         top: 55px;
       }
-      .info{
+      .sha-info{
         line-height: 26px;
         padding: 30px;
         @include textCenter();
-        .nickname{
+        .sha-nickname{
           font-size: $font20;
           word-spacing: 2px;
           letter-spacing: 2px;

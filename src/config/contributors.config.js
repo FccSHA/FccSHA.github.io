@@ -17,4 +17,10 @@ export default [
     hobbies: '小裙纸',
     cup: 'G',
   },
+  {
+    username: 'Becavalier',
+    nickname: '航妹',
+    hobbies: '小裙纸',
+    cup: 'G',
+  },
 ];

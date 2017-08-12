@@ -9,15 +9,14 @@ export default class Contributor extends React.Component{
   render(){
     const user = this.props.user;
     return (
-      <div className="contributor">
-        <span className="bg"></span>
-        <img className="logo" src={user.avatar_url || '/static/EastPerl.svg'}/>
-        <div className="info">
-          <div className="nickname">{user.nickname}</div>
-          <div className="cup">罩杯: {user.cup}</div>
-          <div className="hobbies">爱好: {user.hobbies}</div>
+      <a className="sha-contributor" target="_blank" href={"https://github.com/" + user.username}>
+        <img className="sha-logo" src={user.avatar_url || '/static/EastPerl.svg'}/>
+        <div className="sha-info">
+          <div className="sha-nickname">{user.nickname}</div>
+          <div className="sha-cup">罩杯: {user.cup}</div>
+          <div className="sha-hobbies">爱好: {user.hobbies}</div>
         </div>
-      </div>
+      </a>
     )
   }
 }
