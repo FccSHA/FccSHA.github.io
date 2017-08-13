@@ -1,7 +1,7 @@
 import React from 'react';
 import {SideItem} from '../components/sideItem';
 import SideBarItems from '../config/sidebar.config';
-import {Menu, Popover} from 'antd';
+import {Menu, Popover, Button, Icon} from 'antd';
 
 export default class SideBar extends React.Component {
   render() {
@@ -9,11 +9,21 @@ export default class SideBar extends React.Component {
       <img src="/static/imgs/group-owner.jpg" alt=""
         style={{ height: '260px', width: '200px'}}/>
     );
+
+    const NavBar = (<Menu class="sha-main-nav-phone" mode="inline" theme="light" defaultSelectedKeys={["0"]}>
+      {SideBarItems.map((v, i) => <SideItem title={v.title} icon={v.icon} to={v.to} key={i}/>)}
+    </Menu>);
+
     return (
       <div>
         <img className="sha-main-logo" src="/static/imgs/EastPerl.svg" alt="EastPerl"/>
         <h2 className="sha-img-legend">FCC Shanghai</h2>
-        <Menu mode="inline" theme="light" defaultSelectedKeys={["0"]}>
+        <Popover content={NavBar} trigger="click">
+          <Button className="sha-toggle-nav" type="primary">
+            <Icon type='menu-unfold'/>
+          </Button>
+        </Popover>
+        <Menu className="sha-main-nav" mode="inline" theme="light" defaultSelectedKeys={["0"]}>
           {SideBarItems.map((v, i) => <SideItem title={v.title} icon={v.icon} to={v.to} key={i}/>)}
         </Menu>
         <div className="sha-social">
@@ -33,6 +43,7 @@ export default class SideBar extends React.Component {
             </Popover>
           </p>
         </div>
+
       </div>
     )
   }

@@ -68,3 +68,21 @@ $color: #293a46;
     }
   }
 }
+
+
+@media (max-width: $mediaPhone) {
+  .sha-contributors{
+    .sha-title{
+      @include textCenter();
+      font-size: 24px;
+    }
+    .sha-contributors-wall{
+      .sha-contributor{
+        width: 100%;
+        .sha-logo{
+          left: calc(50% - 45px);
+        }
+      }
+    }
+  }
+}

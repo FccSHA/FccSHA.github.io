@@ -40,7 +40,7 @@ export default class Contributors extends React.Component {
   render() {
     const users = this.state.users.map((user, index)=>{
       return (
-        <Col span={8} key={index}>
+        <Col sm={{span:8}} xs={{span:24}} key={index}>
           <Contributor user={user}/>
         </Col>
       );

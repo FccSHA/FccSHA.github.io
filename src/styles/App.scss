@@ -33,6 +33,9 @@ h1, h2, h3, h4, h5 {
     width: 1280px;
     margin: 0 auto;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 15px rgba(0,0,0,0.1);
+    .sha-side-main-phone{
+      display: none;
+    }
     .sha-side-main {
       user-select: none;
       cursor: default;
@@ -42,6 +45,9 @@ h1, h2, h3, h4, h5 {
       border-right: 1px solid rgba(0,0,0,0.03);
       width: 200px;
       float: left;
+      .sha-toggle-nav{
+        display: none;
+      }
       .sha-main-logo {
         padding: 6px;
         width: $per100;
@@ -84,6 +90,41 @@ h1, h2, h3, h4, h5 {
       > div {
         width: 95%;
         margin: 0 auto;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $mediaPhone) {
+  #root {
+    width: 100%;
+    .sha-main {
+      width: 100%;
+      box-shadow: none;
+      margin: 0 0;
+      .sha-side-main {
+        display: fixed;
+        width: 100%;
+        height: 60px;
+        .sha-img-legend{
+          margin: 10px 0;
+        }
+        .sha-toggle-nav{
+          display: inline-block;
+          position: absolute;
+          right: 14px;
+          top: 14px;
+        }
+        .sha-main-logo,
+        .sha-social,
+        .sha-main-nav{
+          display: none;
+        }
+      }
+      .sha-router-main{
+        width: 100%;
+        margin: 0 0;
       }
     }
   }
