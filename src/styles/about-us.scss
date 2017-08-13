@@ -34,3 +34,27 @@
     }
   }
 }
+
+@media (max-width: $mediaPhone) {
+  .sha-router-main {
+    & .sha-about-us {
+      .sha-carousel-legend {
+        @include textCenter();
+      }
+      .sha-carousel {
+        .slick-slide {
+          text-align: center;
+          height: 200px;
+          line-height: 200px;
+          img {
+            width : 100%;
+            height: inherit;
+          }
+        }
+      }
+      .sha-intro-title {
+        @include textCenter();
+      }
+    }
+  }
+}
